@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import config from "@/config";
-import logoWithText from "@/public/logo-with-text.png";
 
 const Hero = () => {
   return (
@@ -45,11 +44,11 @@ const Hero = () => {
           className="mb-12 flex justify-center"
         >
           <Image
-            src={logoWithText}
+            src="/e-Quil.png"
             alt="E-quil - Beat Burnout"
-            width={300}
-            height={300}
-            className="w-auto h-auto max-w-xs"
+            width={400}
+            height={400}
+            className="w-auto h-auto max-w-md"
             priority
           />
         </motion.div>

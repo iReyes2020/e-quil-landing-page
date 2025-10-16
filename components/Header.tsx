@@ -7,7 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ButtonSignin from "./ButtonSignin";
 import config from "@/config";
-import logoIcon from "@/public/logo-icon.png";
 
 const links: {
   href: string;
@@ -58,7 +57,7 @@ const Header = () => {
             title={`${config.appName} homepage`}
           >
             <Image
-              src={logoIcon}
+              src="/e-Quil (1).png"
               alt={`${config.appName} logo`}
               width={40}
               height={40}
@@ -124,7 +123,7 @@ const Header = () => {
               href="/"
             >
               <Image
-                src={logoIcon}
+                src="/e-Quil (1).png"
                 alt={`${config.appName} logo`}
                 width={40}
                 height={40}
