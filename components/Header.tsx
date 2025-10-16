@@ -4,9 +4,8 @@ import { useState, useEffect } from "react";
 import type { JSX } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 import ButtonSignin from "./ButtonSignin";
-import logo from "@/app/icon.png";
+import Logo from "./Logo";
 import config from "@/config";
 
 const links: {
@@ -53,20 +52,12 @@ const Header = () => {
         {/* Your logo/name on large screens */}
         <div className="flex lg:flex-1">
           <Link
-            className="flex items-center gap-2 shrink-0 "
+            className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity"
             href="/"
             title={`${config.appName} homepage`}
           >
-            <Image
-              src={logo}
-              alt={`${config.appName} logo`}
-              className="w-8"
-              placeholder="blur"
-              priority={true}
-              width={48}
-              height={48}
-            />
-            <span className="font-extrabold text-lg">{config.appName}</span>
+            <Logo size="md" />
+            <span className="font-extrabold text-lg text-brand-white">{config.appName}</span>
           </Link>
         </div>
         {/* Burger button to open menu on mobile */}
@@ -120,20 +111,12 @@ const Header = () => {
           {/* Your logo/name on small screens */}
           <div className="flex items-center justify-between">
             <Link
-              className="flex items-center gap-2 shrink-0 "
+              className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity"
               title={`${config.appName} homepage`}
               href="/"
             >
-              <Image
-                src={logo}
-                alt={`${config.appName} logo`}
-                className="w-8"
-                placeholder="blur"
-                priority={true}
-                width={48}
-                height={48}
-              />
-              <span className="font-extrabold text-lg">{config.appName}</span>
+              <Logo size="md" />
+              <span className="font-extrabold text-lg text-brand-white">{config.appName}</span>
             </Link>
             <button
               type="button"
