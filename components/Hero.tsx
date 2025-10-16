@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Logo from "./Logo";
+import LogoWithText from "./LogoWithText";
 import config from "@/config";
 
 const Hero = () => {
@@ -36,14 +36,14 @@ const Hero = () => {
       </div>
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Logo */}
+        {/* Logo with Text */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="mb-8 flex justify-center"
+          className="mb-12 flex justify-center"
         >
-          <Logo size="lg" />
+          <LogoWithText size="lg" />
         </motion.div>
 
         {/* Main Headline */}

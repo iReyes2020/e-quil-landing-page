@@ -16,9 +16,9 @@ import { Metadata } from 'next';
 
 // Add metadata for SEO
 export const metadata: Metadata = {
-  title: 'FeNAgO - Agentic AI SaaS Platform Template',
-  description: 'The complete platform for building agentic AI-powered SaaS products—ideal for students, developers, startups, and entrepreneurs looking to innovate rapidly. In the near future, every traditional SaaS application will inevitably be surpassed by an Agentic SaaS solution, redefining the competitive landscape.',
-  keywords: 'agentic AI, SaaS template, AI platform, DrLee, AI development, FeNAgO, AI startup',
+  title: 'E-quil - Beat Burnout with AI-Powered Insights',
+  description: 'Transform workplace data into actionable intelligence. E-quil identifies burnout risk before it impacts your organization, helping you retain top talent and build resilient, high-performing teams.',
+  keywords: 'burnout prevention, employee well-being, AI analytics, HR technology, team resilience, workplace intelligence',
 };
 
 export default function Home(): JSX.Element {

@@ -5,7 +5,7 @@ import type { JSX } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import ButtonSignin from "./ButtonSignin";
-import Logo from "./Logo";
+import LogoIcon from "./LogoIcon";
 import config from "@/config";
 
 const links: {
@@ -52,11 +52,11 @@ const Header = () => {
         {/* Your logo/name on large screens */}
         <div className="flex lg:flex-1">
           <Link
-            className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity"
             href="/"
             title={`${config.appName} homepage`}
           >
-            <Logo size="md" />
+            <LogoIcon size="md" />
             <span className="font-extrabold text-lg text-brand-white">{config.appName}</span>
           </Link>
         </div>
@@ -111,11 +111,11 @@ const Header = () => {
           {/* Your logo/name on small screens */}
           <div className="flex items-center justify-between">
             <Link
-              className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity"
               title={`${config.appName} homepage`}
               href="/"
             >
-              <Logo size="md" />
+              <LogoIcon size="md" />
               <span className="font-extrabold text-lg text-brand-white">{config.appName}</span>
             </Link>
             <button
