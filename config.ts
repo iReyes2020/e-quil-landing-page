@@ -1,9 +1,10 @@
 import themes from "daisyui/src/theming/themes";
 import { ConfigProps } from "./types/config";
+import { brandColors } from "./config/colors";
 
 const config = {
   // REQUIRED
-  appName: "FeNAgO",
+  appName: "E-quil",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
     "The NextJS boilerplate with all you need to build your SaaS, AI tool, or any other web app.",
@@ -23,44 +24,63 @@ const config = {
         priceId:
           process.env.NODE_ENV === "development"
             ? "price_1Niyy5AxyNprDp7iZIqEyD2h"
-            : "price_456",
+            : "price_pro",
         //  REQUIRED - Name of the plan, displayed on the pricing page
-        name: "Starter",
+        name: "Pro",
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
-        description: "Perfect for small projects",
+        description: "For growing teams",
         // The price you want to display, the one user will be charged on Stripe.
-        price: 99,
+        price: 299,
         // If you have an anchor price (i.e. $29) that you want to display crossed out, put it here. Otherwise, leave it empty
-        priceAnchor: 149,
+        priceAnchor: 399,
         features: [
           {
-            name: "NextJS boilerplate",
+            name: "Up to 500 employees",
           },
-          { name: "User oauth" },
-          { name: "Database" },
-          { name: "Emails" },
+          { name: "Real-time burnout alerts" },
+          { name: "Basic workload analytics" },
+          { name: "Email support" },
         ],
       },
       {
         priceId:
           process.env.NODE_ENV === "development"
             ? "price_1O5KtcAxyNprDp7iftKnrrpw"
-            : "price_456",
+            : "price_business",
         // This plan will look different on the pricing page, it will be highlighted. You can only have one plan with isFeatured: true
         isFeatured: true,
-        name: "Advanced",
-        description: "You need more power",
-        price: 149,
-        priceAnchor: 299,
+        name: "Business",
+        description: "Most popular",
+        price: 799,
+        priceAnchor: 999,
         features: [
           {
-            name: "Agentic SaaS app NextJS boilerplate",
+            name: "Up to 2,000 employees",
           },
-          { name: "User oauth" },
-          { name: "Database" },
-          { name: "Emails" },
-          { name: "1 year of updates" },
-          { name: "24/7 support" },
+          { name: "Advanced predictive analytics" },
+          { name: "Intervention recommendations" },
+          { name: "HRIS & Slack integration" },
+          { name: "Priority support" },
+          { name: "Custom dashboards" },
+        ],
+      },
+      {
+        priceId:
+          process.env.NODE_ENV === "development"
+            ? "price_1O5KtcAxyNprDp7iftKnrrpw"
+            : "price_enterprise",
+        name: "Enterprise",
+        description: "For large organizations",
+        price: 0,
+        features: [
+          {
+            name: "Unlimited employees",
+          },
+          { name: "Full API access" },
+          { name: "Dedicated account manager" },
+          { name: "Custom integrations" },
+          { name: "24/7 phone support" },
+          { name: "SLA guarantee" },
         ],
       },
     ],
@@ -84,7 +104,7 @@ const config = {
     theme: "light",
     // REQUIRED — This color will be reflected on the whole app outside of the document (loading bar, Chrome tabs, etc..). By default it takes the primary color from your DaisyUI theme (make sure to update your the theme name after "data-theme=")
     // OR you can just do this to use a custom color: main: "#f37055". HEX only.
-    main: themes["light"]["primary"],
+    main: brandColors.teal,
   },
   auth: {
     // REQUIRED — the path to log in users. It's use to protect private routes (like /dashboard). It's used in apiClient (/libs/api.js) upon 401 errors from our API

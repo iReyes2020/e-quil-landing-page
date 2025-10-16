@@ -1,30 +1,56 @@
-import Image from "next/image";
-import config from "@/config";
+"use client";
+
+import { motion } from "framer-motion";
 
 const CTA = () => {
   return (
-    <section className="relative hero overflow-hidden min-h-screen">
-      <Image
-        src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3540&q=80"
-        alt="Background"
-        className="object-cover w-full"
-        fill
-      />
-      <div className="relative hero-overlay bg-neutral bg-opacity-70"></div>
-      <div className="relative hero-content text-center text-neutral-content p-8">
-        <div className="flex flex-col items-center max-w-xl p-8 md:p-0">
-          <h2 className="font-bold text-3xl md:text-5xl tracking-tight mb-8 md:mb-12">
-            Boost your app, launch, earn
-          </h2>
-          <p className="text-lg opacity-80 mb-12 md:mb-16">
-            Don&apos;t waste time integrating APIs or designing a pricing
-            section...
-          </p>
+    <section className="bg-brand-ocean py-16 md:py-32 px-8 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          className="absolute top-10 right-20 w-64 h-64 bg-brand-teal/5 rounded-full blur-3xl"
+          animate={{
+            y: [0, 20, 0],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
 
-          <button className="btn btn-primary btn-wide">
-            Get {config.appName}
-          </button>
-        </div>
+      <div className="max-w-3xl mx-auto text-center relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="font-bold text-4xl md:text-5xl tracking-tight mb-6 text-brand-white">
+            Ready to Transform Burnout into Breakthrough?
+          </h2>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-lg text-brand-white/80 mb-8 max-w-xl mx-auto"
+        >
+          Join leading organizations that are preventing burnout and building resilient teams with E-quil.
+        </motion.p>
+
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="px-8 py-3 text-lg font-semibold rounded-lg bg-brand-teal hover:bg-brand-teal/90 text-white transition-all"
+        >
+          See It In Action
+        </motion.button>
       </div>
     </section>
   );

@@ -14,20 +14,24 @@ const links: {
   label: string;
 }[] = [
   {
+    href: "/#features",
+    label: "Features",
+  },
+  {
     href: "/#pricing",
     label: "Pricing",
   },
   {
-    href: "/#testimonials",
-    label: "Reviews",
+    href: "/#resources",
+    label: "Resources",
   },
   {
-    href: "/#faq",
-    label: "FAQ",
+    href: "/#contact",
+    label: "Contact",
   },
 ];
 
-const cta: JSX.Element = <ButtonSignin extraStyle="btn-primary" />;
+const cta: JSX.Element = <ButtonSignin text="Request a Demo" extraStyle="btn-primary bg-brand-teal border-brand-teal hover:bg-brand-teal/90 text-white" />;
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
@@ -41,7 +45,7 @@ const Header = () => {
   }, [searchParams]);
 
   return (
-    <header className="bg-base-200">
+    <header className="sticky top-0 z-50 bg-brand-ocean border-b border-brand-teal/20">
       <nav
         className="container flex items-center justify-between px-8 py-4 mx-auto"
         aria-label="Global"
@@ -96,7 +100,7 @@ const Header = () => {
             <Link
               href={link.href}
               key={link.href}
-              className="link link-hover"
+              className="text-brand-white hover:text-brand-teal transition-colors text-sm font-medium"
               title={link.label}
             >
               {link.label}
@@ -111,7 +115,7 @@ const Header = () => {
       {/* Mobile menu, show/hide based on menu state. */}
       <div className={`relative z-50 ${isOpen ? "" : "hidden"}`}>
         <div
-          className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-4 overflow-y-auto bg-base-200 sm:max-w-sm sm:ring-1 sm:ring-neutral/10 transform origin-right transition ease-in-out duration-300`}
+          className={`fixed inset-y-0 right-0 z-10 w-full px-8 py-4 overflow-y-auto bg-brand-ocean sm:max-w-sm sm:ring-1 sm:ring-brand-teal/20 transform origin-right transition ease-in-out duration-300`}
         >
           {/* Your logo/name on small screens */}
           <div className="flex items-center justify-between">
@@ -162,7 +166,7 @@ const Header = () => {
                   <Link
                     href={link.href}
                     key={link.href}
-                    className="link link-hover"
+                    className="text-brand-white hover:text-brand-teal transition-colors text-sm font-medium"
                     title={link.label}
                   >
                     {link.label}

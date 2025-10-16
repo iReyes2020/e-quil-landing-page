@@ -41,26 +41,15 @@ const Step = ({ emoji, text }: { emoji: string; text: string }) => {
 // - Features: "ShipFast has user auth, Stripe, emails all set up for you"
 const Problem = () => {
   return (
-    <section className="bg-neutral text-neutral-content">
-      <div className="max-w-7xl mx-auto px-8 py-16 md:py-32 text-center">
-        <h2 className="max-w-3xl mx-auto font-extrabold text-4xl md:text-5xl tracking-tight mb-6 md:mb-8">
-          80% of startups fail because founders never launch
-        </h2>
-        <p className="max-w-xl mx-auto text-lg opacity-90 leading-relaxed mb-12 md:mb-20">
-          Emails, DNS records, user authentication... There&apos;s so much going
-          on.
-        </p>
-
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-6">
-          <Step emoji="🧑‍💻" text="8 hrs to add Stripe" />
-
-          <Arrow extraStyle="max-md:-scale-x-100 md:-rotate-90" />
-
-          <Step emoji="😮‍💨" text="Struggle to find time" />
-
-          <Arrow extraStyle="md:-scale-x-100 md:-rotate-90" />
-
-          <Step emoji="😔" text="Quit project" />
+    <section className="bg-brand-white text-brand-ocean">
+      <div className="max-w-7xl mx-auto px-8 py-16 md:py-32">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-extrabold text-4xl md:text-5xl tracking-tight mb-8 leading-tight">
+            Flying Blind While Your Best People Burn Out?
+          </h2>
+          <p className="text-lg leading-relaxed opacity-90">
+            You see the signs: the glazed-over eyes on Zoom, the steady bleed of talent, the constant pressure to do more with less. You&apos;re relying on lagging indicators like engagement surveys and exit interviews, which only tell you what you already suspect: the damage is already done. You&apos;re angry at the reactive, outdated approach to well-being and frustrated by the lack of a clear, scalable solution.
+          </p>
         </div>
       </div>
     </section>

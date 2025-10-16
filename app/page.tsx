@@ -1,8 +1,12 @@
 import { Suspense, ReactNode } from 'react';
 import Header from "@/components/Header";
+import UrgencyBanner from "@/components/UrgencyBanner";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
-import FeaturesAccordion from "@/components/FeaturesAccordion";
+import Solution from "@/components/Solution";
+import ValueProposition from "@/components/ValueProposition";
+import FeaturesHighlights from "@/components/FeaturesHighlights";
+import ROICalculator from "@/components/ROICalculator";
 import Pricing from "@/components/Pricing";
 import Testimonials3 from "@/components/Testimonials3";
 import FAQ from "@/components/FAQ";
@@ -20,14 +24,18 @@ export const metadata: Metadata = {
 export default function Home(): JSX.Element {
   return (
     <>
+      <UrgencyBanner />
       <Suspense fallback={<div>Loading...</div>}>
         <Header />
       </Suspense>
       <main>
-        {/* FeNAgO - The complete platform for building agentic AI-powered SaaS products */}
+        {/* E-quil - AI-powered employee well-being and burnout prevention platform */}
         <Hero />
         <Problem />
-        <FeaturesAccordion />
+        <Solution />
+        <ValueProposition />
+        <FeaturesHighlights />
+        <ROICalculator />
         <Pricing />
         <Testimonials3 />
         <FAQ />

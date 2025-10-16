@@ -13,22 +13,27 @@ interface FAQItemProps {
 
 const faqList: FAQItemProps[] = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
-  },
-  {
-    question: "Can I get a refund?",
+    question: "How do you ensure employee privacy?",
     answer: (
       <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
+        Our platform analyzes anonymized, aggregated data from communication platforms and HRIS systems. No personal content is ever read or stored, and individual privacy is our highest priority.
       </p>
     ),
   },
   {
-    question: "I have another question",
+    question: "How long does implementation take?",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <p>
+        Basic integration can be completed in just a few days. You can start seeing initial insights within the first 30-60 days as the AI model learns your organization's unique patterns.
+      </p>
+    ),
+  },
+  {
+    question: "Is this just another employee survey tool?",
+    answer: (
+      <p>
+        Absolutely not. We focus on objective, real-time behavioral data, not subjective survey responses. This allows us to provide predictive insights, not just lagging indicators.
+      </p>
     ),
   },
 ];
@@ -40,7 +45,7 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
   return (
     <li>
       <button
-        className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-base-content/10"
+        className="relative flex gap-2 items-center w-full py-5 text-base font-semibold text-left border-t md:text-lg border-brand-ocean/10"
         onClick={(e) => {
           e.preventDefault();
           setIsOpen(!isOpen);
@@ -48,7 +53,7 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
         aria-expanded={isOpen}
       >
         <span
-          className={`flex-1 text-base-content ${isOpen ? "text-primary" : ""}`}
+          className={`flex-1 text-brand-ocean ${isOpen ? "text-brand-teal" : ""}`}
         >
           {item?.question}
         </span>
@@ -80,7 +85,7 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
 
       <div
         ref={accordion}
-        className={`transition-all duration-300 ease-in-out opacity-80 overflow-hidden`}
+        className={`transition-all duration-300 ease-in-out opacity-80 overflow-hidden text-brand-ocean/80`}
         style={
           isOpen
             ? { maxHeight: accordion?.current?.scrollHeight, opacity: 1 }
@@ -95,11 +100,11 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
 
 const FAQ = () => {
   return (
-    <section className="bg-base-200" id="faq">
+    <section className="bg-brand-white" id="faq">
       <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
         <div className="flex flex-col text-left basis-1/2">
-          <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
-          <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
+          <p className="inline-block font-semibold text-brand-teal mb-4">FAQ</p>
+          <p className="sm:text-4xl text-3xl font-extrabold text-brand-ocean">
             Frequently Asked Questions
           </p>
         </div>
