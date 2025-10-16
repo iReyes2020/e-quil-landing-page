@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import LogoWithText from "./LogoWithText";
+import Image from "next/image";
 import config from "@/config";
+import logoWithText from "@/public/logo-with-text.png";
 
 const Hero = () => {
   return (
@@ -43,7 +44,14 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="mb-12 flex justify-center"
         >
-          <LogoWithText size="lg" />
+          <Image
+            src={logoWithText}
+            alt="E-quil - Beat Burnout"
+            width={300}
+            height={300}
+            className="w-auto h-auto max-w-xs"
+            priority
+          />
         </motion.div>
 
         {/* Main Headline */}

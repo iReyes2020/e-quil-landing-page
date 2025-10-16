@@ -4,9 +4,10 @@ import { useState, useEffect } from "react";
 import type { JSX } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import ButtonSignin from "./ButtonSignin";
-import LogoIcon from "./LogoIcon";
 import config from "@/config";
+import logoIcon from "@/public/logo-icon.png";
 
 const links: {
   href: string;
@@ -52,11 +53,18 @@ const Header = () => {
         {/* Your logo/name on large screens */}
         <div className="flex lg:flex-1">
           <Link
-            className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity"
             href="/"
             title={`${config.appName} homepage`}
           >
-            <LogoIcon size="md" />
+            <Image
+              src={logoIcon}
+              alt={`${config.appName} logo`}
+              width={40}
+              height={40}
+              className="w-10 h-10"
+              priority
+            />
             <span className="font-extrabold text-lg text-brand-white">{config.appName}</span>
           </Link>
         </div>
@@ -111,11 +119,18 @@ const Header = () => {
           {/* Your logo/name on small screens */}
           <div className="flex items-center justify-between">
             <Link
-              className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity"
+              className="flex items-center gap-3 shrink-0 hover:opacity-80 transition-opacity"
               title={`${config.appName} homepage`}
               href="/"
             >
-              <LogoIcon size="md" />
+              <Image
+                src={logoIcon}
+                alt={`${config.appName} logo`}
+                width={40}
+                height={40}
+                className="w-10 h-10"
+                priority
+              />
               <span className="font-extrabold text-lg text-brand-white">{config.appName}</span>
             </Link>
             <button
